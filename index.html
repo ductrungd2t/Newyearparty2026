@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Year Party 2026 - Đăng ký tham dự</title>
+  <meta name="description" content="Trang đăng ký tham dự New Year Party 2026" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Trang chủ">
+        <img src="img/logo.svg" alt="New Year Party" />
+      </a>
+      <nav class="navlinks">
+        <a href="#thong-tin">Thông tin</a>
+        <a href="#dang-ky" class="cta">Đăng ký</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="badge">🎉 NEW YEAR PARTY 2026</div>
+        <h1>Đăng ký tham dự Year End / New Year Party</h1>
+        <p>
+          Điền thông tin bên dưới để xác nhận tham dự. Bạn có thể chọn số người đi cùng,
+          món ăn (chay/mặn), và góp ý cho chương trình.
+        </p>
+        <div class="meta">
+          <div class="meta-item"><span>📅</span><strong>Ngày:</strong> <span class="muted">(điền sau)</span></div>
+          <div class="meta-item"><span>⏰</span><strong>Giờ:</strong> <span class="muted">(điền sau)</span></div>
+          <div class="meta-item"><span>📍</span><strong>Địa điểm:</strong> <span class="muted">(điền sau)</span></div>
+        </div>
+        <a class="cta cta-lg" href="#dang-ky">Đi tới form đăng ký</a>
+      </div>
+
+      <div class="hero-card" aria-hidden="true">
+        <div class="hero-card-top">
+          <div class="spark" title="spark"></div>
+          <div class="spark" title="spark"></div>
+          <div class="spark" title="spark"></div>
+        </div>
+        <div class="hero-card-body">
+          <h2>Lưu ý nhanh</h2>
+          <ul>
+            <li>Vui lòng nhập đúng số điện thoại/email để liên hệ.</li>
+            <li>Nếu đổi ý, bạn có thể đăng ký lại — hệ thống sẽ ghi nhận bản mới nhất.</li>
+            <li>Ban tổ chức sẽ tổng hợp danh sách và gửi xác nhận.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <main class="container">
+    <section id="thong-tin" class="info">
+      <h2 class="section-title">Thông tin chương trình</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>👔 Dress code</h3>
+          <p>Gợi ý: <strong>Đỏ / Vàng / Đen</strong> hoặc trang phục lịch sự thoải mái.</p>
+        </div>
+        <div class="info-card">
+          <h3>🍽️ Ăn uống</h3>
+          <p>Có lựa chọn <strong>chay</strong>. Vui lòng ghi rõ dị ứng (nếu có).</p>
+        </div>
+        <div class="info-card">
+          <h3>🎁 Mini game</h3>
+          <p>Chuẩn bị tinh thần “cháy” hết mình — có quà nho nhỏ 😄</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-form" id="dang-ky">
+      <h2 class="lead-title">Form đăng ký tham dự</h2>
+      <p class="lead-sub">Các mục có dấu <span class="req">*</span> là bắt buộc.</p>
+
+      <form id="rsvpForm" class="lead-grid" autocomplete="on" novalidate>
+        <div class="field">
+          <label>Họ và tên <span class="req">*</span></label>
+          <input type="text" name="fullName" placeholder="Nguyễn Văn A" required />
+        </div>
+
+        <div class="field">
+          <label>Phòng ban / Lớp / Team <span class="req">*</span></label>
+          <input type="text" name="team" placeholder="Marketing / 11A1 ..." required />
+        </div>
+
+        <div class="field">
+          <label>Số điện thoại <span class="req">*</span></label>
+          <input type="tel" name="phone" placeholder="09xx..." required />
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="you@example.com" />
+        </div>
+
+        <div class="field">
+          <label>Bạn sẽ tham dự? <span class="req">*</span></label>
+          <select name="attend" required>
+            <option value="">-- Chọn --</option>
+            <option value="Yes">Có</option>
+            <option value="No">Không</option>
+            <option value="Maybe">Chưa chắc</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Số người đi cùng</label>
+          <select name="guests">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Chế độ ăn</label>
+          <select name="diet">
+            <option value="Normal">Bình thường</option>
+            <option value="Vegetarian">Chay</option>
+            <option value="NoBeef">Không ăn bò</option>
+            <option value="NoSeafood">Không ăn hải sản</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Dị ứng / ghi chú ăn uống</label>
+          <input type="text" name="allergy" placeholder="Đậu phộng, hải sản..." />
+        </div>
+
+        <div class="field field-wide">
+          <label>Góp ý / tiết mục muốn có</label>
+          <textarea name="note" rows="3" placeholder="Ví dụ: muốn có karaoke, bốc thăm trúng thưởng... "></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="cta" type="submit">Gửi đăng ký</button>
+          <button class="btn" type="button" id="btnDownload">Tải bản sao (CSV)</button>
+        </div>
+
+        <p id="formMsg" class="lead-msg" aria-live="polite"></p>
+        <p class="fineprint">
+          * Dữ liệu chỉ dùng để tổng hợp danh sách tham dự. Bạn có thể tự tải bản sao CSV về máy.
+        </p>
+      </form>
+    </section>
+
+    <footer>
+      <p>© <span id="y"></span> New Year Party. Made with ✨</p>
+    </footer>
+  </main>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

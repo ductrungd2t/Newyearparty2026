@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80" role="img" aria-label="New Year Party">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b3121d"/>
+      <stop offset="1" stop-color="#d9a300"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="236" height="76" rx="18" fill="#ffffff" stroke="#f1e0b6"/>
+  <g transform="translate(16 14)">
+    <circle cx="20" cy="20" r="18" fill="url(#g)"/>
+    <path d="M20 6 L23.2 15.2 L33 15.2 L25 20.8 L28.2 30 L20 24.3 L11.8 30 L15 20.8 L7 15.2 L16.8 15.2 Z" fill="#fff" opacity="0.95"/>
+  </g>
+  <text x="66" y="33" font-family="system-ui,Segoe UI,Arial" font-size="20" font-weight="800" fill="#7b0d14">NEW YEAR PARTY</text>
+  <text x="66" y="55" font-family="system-ui,Segoe UI,Arial" font-size="14" font-weight="650" fill="#6a6a6a">RSVP / Đăng ký tham dự</text>
+</svg>
