@@ -10,7 +10,7 @@
 
   // Nếu bạn có Apps Script (Google Sheets) thì dán link /exec vào đây:
   // Ví dụ: const SCRIPT_URL = "https://script.google.com/macros/s/XXXX/exec";
-  const SCRIPT_URL = ""; // để trống nếu chưa dùng
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyiDWjYY5PXbZqiSB27gm3sr9ugGfHRTKt6QWWQzH2dQpq7R0b7hT47Yr3N5v8fxeucsA/exec"; // để trống nếu chưa dùng
 
   const setMsg = (text, ok = true) => {
     if (!msg) return;
@@ -87,15 +87,15 @@
         await sendToGoogleSheet(data);
         setMsg("✅ Đăng ký thành công! Hẹn gặp bạn ở bữa tiệc 🎉", true);
       } else {
-        // Chưa nối Sheets: vẫn cho “thành công” để test, đồng thời lưu local
         localStorage.setItem("newyearparty_rsvp_latest", JSON.stringify(data));
         setMsg("✅ Đã ghi nhận đăng ký (demo). BTC sẽ tổng hợp danh sách 🎉", true);
       }
-
       form.reset();
     } catch (ex) {
       console.error(ex);
       setMsg("❌ Gửi đăng ký thất bại. Vui lòng thử lại hoặc liên hệ BTC.", false);
+    }
+
     } finally {
       disableButton(false);
     }
