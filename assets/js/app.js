@@ -4,7 +4,7 @@
   if (!FORM) return;
 
   // Dán URL Web App (kết thúc bằng /exec)
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzV_q77wP6SKuw-AO1dx2ouE6FanNPn8cTz9MAXbTcTPg6V9zmrsVQr3x1s82ljxo4xwA/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwdgaSVq8X9PGH-GPMNcLNteZnj-5ZJHX0_s4r4hIOvTsqCxb8NK8_Ysf2FRVAAus1n/exec';
 
   const MSG = document.getElementById('formMsg');
   const setMsg = (text) => { if (MSG) MSG.textContent = text; };
