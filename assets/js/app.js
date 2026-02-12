@@ -15,12 +15,10 @@
     // Lấy dữ liệu & trim
     const fullName  = (FORM.fullName?.value || '').trim();
     const nickname  = (FORM.nickname?.value || '').trim();
-    const attend    = (FORM.attend?.value || '').trim();
-    const diet      = (FORM.diet?.value || '').trim();
     const allergy   = (FORM.allergy?.value || '').trim();
 
     // Ràng buộc gọn (giống mẫu)
-    if (!fullName || !team || !phone || !nickname || !attend) {
+    if (!fullName || !nickname || !allergy) {
       setMsg('Vui lòng điền đủ thông tin bắt buộc (*)');
       return;
     }
@@ -33,11 +31,7 @@
     const body = new URLSearchParams({
       timestamp: new Date().toISOString(),
       fullName,
-      team,
-      phone,
       nickname,
-      attend,
-      diet,
       allergy
     }).toString();
 
