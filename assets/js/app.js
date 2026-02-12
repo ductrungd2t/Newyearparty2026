@@ -3,7 +3,7 @@
   const FORM = document.getElementById('rsvpForm');
   if (!FORM) return;
 
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwW_fIt1yXzbW05msqJ_LoGmUqJtKNVwkSVOn3jjp2ciaW_jlKPdKOFrdlGqB8pxbaJ4A/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx_AczUKQV5-gi3AUdUX--JM71IExAqDmwKEfpyM-KMo4ZiEujKh_drbHABYrtAISnJ/exec';
 
   const MSG = document.getElementById('formMsg');
   const setMsg = (text, ok = true) => {
