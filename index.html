@@ -80,60 +80,28 @@
       <h2 class="lead-title">Form đăng ký tham dự</h2>
       <p class="lead-sub">Các mục có dấu <span class="req">*</span> là bắt buộc.</p>
 
-      <form id="rsvpForm" class="lead-grid" autocomplete="on" novalidate>
-        <div class="field">
-          <label>Họ và tên <span class="req">*</span></label>
-          <input type="text" name="fullName" placeholder="Nguyễn Văn A" required />
-        </div>
+    <form id="rsvpForm" class="lead-grid" autocomplete="on" novalidate>
+    
+      <div class="field field-wide">
+        <label>Biệt danh của bạn <span class="req">*</span></label>
+        <input type="text" name="nickname" placeholder="Nhập biệt danh..." required />
+      </div>
+    
+      <div class="field field-wide">
+        <label>Số báo danh <span class="req">*</span></label>
+        <input type="text" name="studentId" placeholder="Nhập số báo danh..." required />
+      </div>
+    
+      <div class="actions">
+        <button class="cta" type="submit">Gửi đăng ký</button>
+      </div>
+    
+      <p id="formMsg" class="lead-msg" aria-live="polite"></p>
+      <p class="fineprint">
+        * Vui lòng điền đủ 2 thông tin bắt buộc
+      </p>
+    </form>
 
-        <div class="field">
-          <label>Phòng ban<span class="req">*</span></label>
-          <input type="text" name="team" placeholder="Marketing / 11A1 ..." required />
-        </div>
-
-        <div class="field">
-          <label>Số điện thoại <span class="req">*</span></label>
-          <input type="tel" name="phone" placeholder="09xx..." required />
-        </div>
-
-        <div class="field">
-          <label for="nickname">Biệt danh của bạn khi tham dự tiệc</label>
-          <input type="text" id="nickname" name="nickname" placeholder="Ví dụ: Cá Mập, Bé Na, Trùm Sales..." required>
-        </div>
-
-        <div class="field">
-          <label>Bạn sẽ tham dự? <span class="req">*</span></label>
-          <select name="attend" required>
-            <option value="">-- Chọn --</option>
-            <option value="Yes">Có</option>
-            <option value="No">Không</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>Chọn món ăn sáng cho ngày ...</label>
-          <select name="diet">
-            <option value="Normal">Mì</option>
-            <option value="Vegetarian">Bún phở</option>
-            <option value="NoBeef">Nhịn</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>Dị ứng / ghi chú ăn uống</label>
-          <input type="text" name="allergy" placeholder="Đậu phộng, hải sản..." />
-        </div>
-
-
-        <div class="actions">
-          <button class="cta" type="submit">Gửi đăng ký</button>
-        </div>
-
-        <p id="formMsg" class="lead-msg" aria-live="polite"></p>
-        <p class="fineprint">
-          * Nhớ bấm nút gửi đăng ký nha
-        </p>
-      </form>
     </section>
 
     <footer>
