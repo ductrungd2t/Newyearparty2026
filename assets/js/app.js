@@ -14,8 +14,6 @@
 
     // Lấy dữ liệu & trim
     const fullName  = (FORM.fullName?.value || '').trim();
-    const team      = (FORM.team?.value || '').trim();
-    const phone     = (FORM.phone?.value || '').trim();
     const nickname  = (FORM.nickname?.value || '').trim();
     const attend    = (FORM.attend?.value || '').trim();
     const diet      = (FORM.diet?.value || '').trim();
