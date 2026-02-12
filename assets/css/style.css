@@ -11,7 +11,16 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('assets/bg.jpg') no-repeat center center fixed;
+
+  background-size: cover;
+}
 
 .container{width:min(1100px,92vw);margin:0 auto}
 
