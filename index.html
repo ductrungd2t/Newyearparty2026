@@ -87,11 +87,24 @@
         <input type="text" name="nickname" placeholder="Nhập biệt danh..." required />
       </div>
     
-      <div class="field field-wide">
+      <!-- <div class="field field-wide">
         <label>Số báo danh <span class="req">*</span></label>
         <input type="text" name="studentId" placeholder="Nhập số báo danh..." required />
+      </div> -->
+      <div class="field field-wide">
+        <label>Số báo danh <span class="req">*</span></label>
+        <input 
+          type="text"
+          name="studentId"
+          placeholder="Nhập số báo danh..."
+          required
+          inputmode="numeric"
+          pattern="\d{1,2}"
+          maxlength="2"
+          oninput="this.value = this.value.replace(/[^0-9]/g,'')"
+        />
       </div>
-    
+
       <div class="actions">
         <button class="cta" type="submit">Gửi đăng ký</button>
       </div>
