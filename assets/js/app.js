@@ -1,25 +1,25 @@
-// ---------- FORM SUBMIT TO GOOGLE SHEETS (RSVP) ----------
+// ---------- FORM SUBMIT TO GOOGLE SHEETS ----------
 (function () {
   const FORM = document.getElementById('rsvpForm');
   if (!FORM) return;
 
-  // Dán URL Web App (kết thúc bằng /exec)
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwW_fIt1yXzbW05msqJ_LoGmUqJtKNVwkSVOn3jjp2ciaW_jlKPdKOFrdlGqB8pxbaJ4A/exec';
 
   const MSG = document.getElementById('formMsg');
-  const setMsg = (text) => { if (MSG) MSG.textContent = text; };
+  const setMsg = (text, ok = true) => {
+    if (!MSG) return;
+    MSG.textContent = text;
+    MSG.className = 'lead-msg ' + (ok ? 'ok' : 'err');
+  };
 
   FORM.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Lấy dữ liệu & trim
-    const fullName  = (FORM.fullName?.value || '').trim();
-    const nickname  = (FORM.nickname?.value || '').trim();
-    const allergy   = (FORM.allergy?.value || '').trim();
+    const nickname = (FORM.nickname?.value || '').trim();
+    const studentId = (FORM.studentId?.value || '').trim();
 
-    // Ràng buộc gọn (giống mẫu)
-    if (!fullName || !nickname || !allergy) {
-      setMsg('Vui lòng điền đủ thông tin bắt buộc (*)');
+    if (!nickname || !studentId) {
+      setMsg('❌ Vui lòng điền đủ thông tin bắt buộc (*)', false);
       return;
     }
 
@@ -27,28 +27,27 @@
     const btn = FORM.querySelector('button[type="submit"]');
     if (btn) btn.disabled = true;
 
-    // Gửi dạng x-www-form-urlencoded (ổn định no-cors)
     const body = new URLSearchParams({
       timestamp: new Date().toISOString(),
-      fullName,
       nickname,
-      allergy
+      studentId
     }).toString();
 
     try {
       await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
         body
       });
 
-      // Tới đây coi như đã gửi request đi
-      setMsg('✅ Cảm ơn bạn! Thông tin đã được ghi nhận.');
+      setMsg('✅ Đăng ký thành công!');
       FORM.reset();
     } catch (err) {
-      console.error('Submit error:', err);
-      setMsg('❌ Lỗi kết nối. Vui lòng thử lại.');
+      console.error(err);
+      setMsg('❌ Lỗi kết nối. Vui lòng thử lại.', false);
     } finally {
       if (btn) btn.disabled = false;
     }
