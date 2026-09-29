@@ -1,0 +1,9 @@
+const WEDDING_DATE = new Date('2026-11-29T09:00:00+07:00');
+const cover=document.getElementById('cover'),music=document.getElementById('music'),musicBtn=document.getElementById('musicBtn');
+function openInvitation(){cover.classList.add('hidden');document.body.classList.remove('locked');music.play().then(()=>musicBtn.classList.add('playing')).catch(()=>{});setTimeout(()=>cover.remove(),1000)}
+document.getElementById('openInvitation').addEventListener('click',openInvitation);document.getElementById('openText').addEventListener('click',openInvitation);
+musicBtn.addEventListener('click',()=>{if(music.paused){music.play();musicBtn.classList.add('playing')}else{music.pause();musicBtn.classList.remove('playing')}});
+function tick(){let d=WEDDING_DATE-new Date();if(d<0)d=0;const days=Math.floor(d/86400000),hours=Math.floor(d%86400000/3600000),mins=Math.floor(d%3600000/60000),secs=Math.floor(d%60000/1000);[['days',days],['hours',hours],['minutes',mins],['seconds',secs]].forEach(([id,v])=>document.getElementById(id).textContent=String(v).padStart(2,'0'))}tick();setInterval(tick,1000);
+const cal=document.getElementById('calendarDays');const first=(new Date(2026,10,1).getDay()+6)%7;for(let i=0;i<first;i++){let e=document.createElement('span');e.className='empty';cal.appendChild(e)}for(let d=1;d<=30;d++){let e=document.createElement('span');e.textContent=d;if(d===29)e.className='wedding-day';cal.appendChild(e)}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('rsvpForm').addEventListener('submit',e=>{e.preventDefault();const name=new FormData(e.currentTarget).get('name');document.getElementById('rsvpResult').textContent=`Cảm ơn ${name}! Xác nhận của bạn đã được ghi nhận trên bản demo ❤️`;e.currentTarget.reset()});

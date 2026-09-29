@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6d1724" />
+  <meta name="description" content="Thiệp cưới Đinh Đức Trung & Lưu Thị Thu Hương - 29.11.2026" />
+  <title>Đức Trung & Thu Hương | 29.11.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="locked">
+  <div id="cover" class="cover">
+    <div class="cover-card reveal active">
+      <div class="ornament">❦</div>
+      <p class="eyebrow">WEDDING INVITATION</p>
+      <h1><span>Đức Trung</span><i>&</i><span>Thu Hương</span></h1>
+      <div class="date-line"><span></span><b>29 · 11 · 2026</b><span></span></div>
+      <p class="invite-to">Trân trọng kính mời bạn đến chung vui cùng chúng mình</p>
+      <button id="openInvitation" class="seal" aria-label="Mở thiệp"><span>DT<br>&<br>TH</span></button>
+      <button id="openText" class="open-text">MỞ THIỆP</button>
+      <small>Chạm để mở thiệp</small>
+    </div>
+  </div>
+
+  <button id="musicBtn" class="music-btn" aria-label="Bật tắt nhạc">♫</button>
+  <audio id="music" loop preload="none"><source src="assets/wedding-song.mp3" type="audio/mpeg"></audio>
+
+  <main id="mainContent">
+    <section class="hero section">
+      <div class="hero-photo photo-placeholder"><span>ẢNH CƯỚI<br><small>Thay bằng assets/hero.jpg</small></span></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow light">SAVE THE DATE</p>
+        <h2><span>Đinh Đức Trung</span><i>&</i><span>Lưu Thị Thu Hương</span></h2>
+        <p class="hero-date">29 · 11 · 2026</p>
+        <p class="location">NAM ĐỊNH</p>
+        <a class="ghost-btn" href="#invitation">Xem lời mời</a>
+      </div>
+    </section>
+
+    <section id="invitation" class="section paper invitation">
+      <div class="floral floral-a">✦</div><div class="floral floral-b">✦</div>
+      <div class="section-inner narrow reveal">
+        <p class="eyebrow burgundy">TRÂN TRỌNG BÁO TIN</p>
+        <h3>Lễ Thành Hôn</h3>
+        <p class="intro">Sau hành trình gặp gỡ và yêu thương, chúng mình rất hạnh phúc khi được cùng nhau viết tiếp một chương mới.</p>
+        <div class="couple-names"><strong>Đinh Đức Trung</strong><i>&</i><strong>Lưu Thị Thu Hương</strong></div>
+        <div class="divider">❦</div>
+        <p>Hôn lễ được cử hành vào</p>
+        <div class="big-date"><span>CHỦ NHẬT</span><b>29</b><span>THÁNG 11 · 2026</span></div>
+        <p class="muted">Tại Nam Định</p>
+        <p class="note">Thông tin giờ tổ chức và địa chỉ cụ thể sẽ được cập nhật khi bạn cung cấp.</p>
+      </div>
+    </section>
+
+    <section class="section burgundy-section countdown-section">
+      <div class="section-inner reveal">
+        <p class="eyebrow light">CÙNG ĐẾM NGƯỢC</p>
+        <h3>Ngày chúng mình về chung một nhà</h3>
+        <div id="countdown" class="countdown">
+          <div><b id="days">--</b><span>Ngày</span></div><div><b id="hours">--</b><span>Giờ</span></div><div><b id="minutes">--</b><span>Phút</span></div><div><b id="seconds">--</b><span>Giây</span></div>
+        </div>
+        <div class="calendar-card">
+          <div class="cal-head"><span>November</span><b>2026</b></div>
+          <div class="week"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span></div>
+          <div id="calendarDays" class="cal-days"></div>
+        </div>
+        <a class="light-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85+c%C6%B0%E1%BB%9Bi+%C4%90%E1%BB%A9c+Trung+%26+Thu+H%C6%B0%C6%A1ng&dates=20261129T020000Z/20261129T050000Z&location=Nam+%C4%90%E1%BB%8Bnh" target="_blank" rel="noopener">Thêm vào lịch</a>
+      </div>
+    </section>
+
+    <section class="section paper story">
+      <div class="section-inner reveal">
+        <p class="eyebrow burgundy">OUR GALLERY</p><h3>Khoảnh khắc của chúng mình</h3>
+        <p class="muted">Bản demo đang dùng khung ảnh mẫu. Chỉ cần chép ảnh vào thư mục <b>assets</b> là có thể thay thế.</p>
+        <div class="gallery">
+          <div class="gallery-item tall photo-placeholder"><span>01</span></div><div class="gallery-item photo-placeholder"><span>02</span></div><div class="gallery-item photo-placeholder"><span>03</span></div><div class="gallery-item wide photo-placeholder"><span>04</span></div><div class="gallery-item photo-placeholder"><span>05</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section">
+      <div class="location-card reveal">
+        <p class="eyebrow burgundy">WEDDING CEREMONY</p><h3>Tiệc Cưới</h3>
+        <div class="location-icon">⌖</div><h4>Nam Định</h4>
+        <p>Địa chỉ cụ thể sẽ được cập nhật</p>
+        <p class="muted">Chủ nhật · 29 tháng 11 năm 2026</p>
+        <a class="primary-btn" href="https://www.google.com/maps/search/?api=1&query=Nam+%C4%90%E1%BB%8Bnh" target="_blank" rel="noopener">Xem bản đồ</a>
+      </div>
+    </section>
+
+    <section class="section burgundy-section schedule">
+      <div class="section-inner narrow reveal"><p class="eyebrow light">WEDDING DAY</p><h3>Lịch trình ngày cưới</h3>
+        <div class="timeline"><div><time>--:--</time><span></span><p><b>Đón khách</b><small>Chào đón gia đình và bạn bè</small></p></div><div><time>--:--</time><span></span><p><b>Nghi thức cưới</b><small>Khoảnh khắc thiêng liêng của chúng mình</small></p></div><div><time>--:--</time><span></span><p><b>Khai tiệc</b><small>Cùng nâng ly và chung vui</small></p></div></div>
+      </div>
+    </section>
+
+    <section class="section paper rsvp">
+      <div class="section-inner narrow reveal"><p class="eyebrow burgundy">RSVP</p><h3>Xác nhận tham dự</h3><p class="muted">Sự hiện diện của bạn là niềm vui và vinh hạnh của chúng mình.</p>
+        <form id="rsvpForm"><label>Họ và tên<input required name="name" placeholder="Tên của bạn"></label><label>Bạn sẽ tham dự?<select name="attendance"><option>Chắc chắn rồi ❤️</option><option>Rất tiếc, mình không thể tham dự</option></select></label><label>Lời nhắn<textarea name="message" rows="4" placeholder="Gửi một lời chúc đến cô dâu & chú rể..."></textarea></label><button class="primary-btn" type="submit">Gửi xác nhận</button></form>
+        <p id="rsvpResult" class="form-result"></p><small class="muted">Demo GitHub Pages: dữ liệu chưa gửi lên máy chủ. Có thể kết nối Google Forms/Formspree sau.</small>
+      </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner reveal"><div class="ornament">❦</div><p>Thank you</p><h2>Đức Trung <i>&</i> Thu Hương</h2><span>29.11.2026 · NAM ĐỊNH</span><small>Hẹn gặp bạn trong ngày vui của chúng mình!</small></div></footer>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
